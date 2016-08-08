@@ -6,6 +6,7 @@
     [TestFixture]
     public class BottlesTest
     {
+        [Test]
         public void test_the_first_verse()
         {
             var expected = "99 bottles of beer on the wall, " +
@@ -16,6 +17,7 @@
             new Bottles().Verse(99).Should().Be(expected);
         }
 
+        [Test]
         public void test_another_verse()
         {
             var expected = "3 bottles of beer on the wall, " +
@@ -26,6 +28,7 @@
             new Bottles().Verse(3).Should().Be(expected);
         }
 
+        [Test]
         public void test_verse_2()
         {
             var expected = "2 bottles of beer on the wall, " +
@@ -36,6 +39,7 @@
             new Bottles().Verse(2).Should().Be(expected);
         }
 
+        [Test]
         public void test_verse_1()
         {
             var expected = "1 bottle of beer on the wall, " +
@@ -46,6 +50,7 @@
             new Bottles().Verse(1).Should().Be(expected);
         }
 
+        [Test]
         public void test_verse_0()
         {
             var expected = "No more bottles of beer on the wall, " +
@@ -56,6 +61,7 @@
             new Bottles().Verse(0).Should().Be(expected);
         }
 
+        [Test]
         public void test_a_couple_verses()
         {
             var expected = "99 bottles of beer on the wall, " +
@@ -71,6 +77,7 @@
             new Bottles().Verses(99, 98).Should().Be(expected);
         }
 
+        [Test]
         public void test_a_few_verses()
         {
             var expected = "2 bottles of beer on the wall, " +
@@ -91,6 +98,7 @@
             new Bottles().Verses(2, 0).Should().Be(expected);
         }
 
+        [Test]
         public void test_the_whole_song()
         {
             var expected =
