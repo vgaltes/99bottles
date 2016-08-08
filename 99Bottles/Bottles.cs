@@ -4,10 +4,12 @@
     {
         public string Verse(int verseNumber)
         {
-            return $"{verseNumber} bottles of beer on the wall, " +
-                   $"{verseNumber} bottles of beer.\n" +
+            var plural = verseNumber > 1 ? "s" : "";
+            var nextPlural = verseNumber - 1 > 1 ? "s" : "";
+            return $"{verseNumber} bottle{plural} of beer on the wall, " +
+                   $"{verseNumber} bottle{plural} of beer.\n" +
                    "Take one down and pass it around, " +
-                   $"{verseNumber - 1} bottle of beer on the wall.\n";
+                   $"{verseNumber - 1} bottle{nextPlural} of beer on the wall.\n";
         }
 
         public string Verses(int starting, int ending)
