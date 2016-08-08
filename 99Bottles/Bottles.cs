@@ -1,5 +1,7 @@
 ﻿namespace _99Bottles
 {
+    using System.Runtime.InteropServices.WindowsRuntime;
+
     public class Bottles
     {
         public string Verse(int verseNumber)
@@ -25,7 +27,14 @@
 
         public string Verses(int starting, int ending)
         {
-            throw new System.NotImplementedException();
+            var verses = new string[starting - ending + 1];
+
+            for (var i = starting; i >= ending; i--)
+            {
+                verses[starting - i] = Verse(i);
+            }
+
+            return string.Join("\n", verses);
         }
 
         public string Song()
