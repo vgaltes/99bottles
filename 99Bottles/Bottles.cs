@@ -39,7 +39,7 @@
 
         public string Song()
         {
-            throw new System.NotImplementedException();
+            return Verses(99, 0);
         }
     }
 }
